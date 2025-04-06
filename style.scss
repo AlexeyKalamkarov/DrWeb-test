@@ -1,0 +1,87 @@
+body {
+    margin: 0 auto;
+    --webkit-color-grey: #666666;
+    --webkit-color-white: #FFFFFF;
+    --webkit-color-green: #69B42E;
+    --webkit-color-dark: #1A1A1A;
+    --webkit-color-black: #000000;
+
+}
+h1 {
+    // font-size: 5.375rem;
+    font-size: clamp(3rem, 5vw, 5.375rem);
+    color: var(--webkit-color-black);
+    font-weight: 700;
+    height: 0em;
+}
+h2 {
+    font-size: 2.5rem;
+    color: var(--webkit-color-grey);
+    font-weight: 400;
+}
+h3 {
+    font-size: 2rem;
+    color: var(--webkit-color-white);
+}
+p {
+    font-size: 1.25rem;
+    color: var(--webkit-color-white);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    .section-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+    }
+    }
+    .section-promo {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .section-description {
+        margin: 0 auto;
+        max-width: 1168px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 64px;
+        padding: 80px 100px;
+        background-color: var(--webkit-color-dark);
+        border-radius: 32px;
+        @media (max-width: 768px) {
+            max-width: 704px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+        }
+        .section-description__left-content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+        }
+        .section-description__right-content {
+            .section-description__right-content_card {
+                padding: 40px 32px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                background-color: var(--webkit-color-white);
+            }
+        }
+    }
+}
