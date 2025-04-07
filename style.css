@@ -30,6 +30,18 @@ p {
   color: var(--webkit-color-white);
 }
 
+button {
+  width: 304px;
+  height: 48px;
+  background-color: var(--webkit-color-green);
+  border-radius: 5px;
+  color: var(--webkit-color-white);
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  border: 1px var(--webkit-color-green) solid;
+  cursor: pointer;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -78,6 +90,10 @@ p {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  max-width: 509px;
+}
+.container .section-description .section-description__right-content {
+  width: 368px;
 }
 .container .section-description .section-description__right-content .section-description__right-content_card {
   padding: 40px 32px;
@@ -85,4 +101,45 @@ p {
   flex-direction: column;
   gap: 24px;
   background-color: var(--webkit-color-white);
+  border-radius: 10px;
+}
+.container .section-description .section-description__right-content .section-description__right-content_card .price {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .section-description .section-description__right-content .section-description__right-content_card .price .price-content__left {
+  display: flex;
+  flex-direction: column;
+}
+.container .section-description .section-description__right-content .section-description__right-content_card .price .price-content__left .price-content__left_span1 {
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  color: #b3b3b3;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.container .section-description .section-description__right-content .section-description__right-content_card .price .price-content__left .price-content__left_span2 {
+  font-family: "Roboto";
+  font-size: 2rem;
+  color: var(--webkit-color-black);
+  font-weight: 400;
+}
+.container .section-description .section-description__right-content .section-description__right-content_card .price .price-content__right span {
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  color: var(--webkit-color-black);
+  font-weight: 400;
+}
+.container .section-card {
+  margin: 0 auto;
+  max-width: 1168px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.container .section-card .section-card__left, .container .section-card .section-card__right {
+  flex: 1;
+  background-color: #666666;
 }/*# sourceMappingURL=style.css.map */
