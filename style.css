@@ -246,7 +246,7 @@ button {
 }
 @media (max-width: 768px) {
   .footer {
-    margin-top: 64px;
+    margin-top: 48px;
   }
 }
 .footer .footer-content {
