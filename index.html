@@ -4,6 +4,7 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="reset.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
@@ -14,11 +15,12 @@
                     <h1>Защити свой цифровой мир</h1>
                     <h2>с Dr.Web Security Space для Android</h2>
                 </div>
+                <button onclick="scrollToSection('sectionDescription')">Купить со скидкой</button>
             </section>
             <section class="section-promo">
                 <img src="./Images/Mockup 1.png" alt="">
             </section>
-            <section class="section-description"> 
+            <section class="section-description" id="sectionDescription"> 
                 <div class="section-description__left-content">
                     <div class="">
                         <p style="color: var(--webkit-color-green)">С 1 по 15 февраля 2023 года</p>
@@ -29,7 +31,7 @@
                             онлайн-банкинг, личные переписки, доступ к социальным сетям и вашим контактам</p>
                     </div>
                     <div class="">
-                        <a href="#">Условия акции</a>
+                        <a href="./action.html" style="color: var(--webkit-color-green); font-size: 1rem;">Условия акции</a>
                     </div>
                 </div>
                 <div class="section-description__right-content">
@@ -75,8 +77,22 @@
                         <p>Антивирус</p>
                     </div>
                     <img src="./Images/img2.png" alt="">
+                    <div class="section-card__right_img">
+                    </div>
                 </div>
             </section>
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-content__title">
+                        <img src="./Images/Logo footer.svg" alt="">
+                        <p>© «Доктор Веб» 2003–2023</p>
+                    </div>
+                    <div class="footer-content__description">
+                        <p>«Доктор Веб» — российский производитель <br> антивирусных средств защиты информации <br> под маркой Dr.Web.</p>
+                    </div>
+                </div>
+            </footer>
         </div>
+        <script src="./script.js"></script>
     </body>
 </html>

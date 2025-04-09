@@ -1,4 +1,5 @@
 body {
+    // font-size: 16p;
     margin: 0 auto;
     --webkit-color-grey: #666666;
     --webkit-color-white: #FFFFFF;
@@ -12,7 +13,6 @@ h1 {
     font-size: clamp(3rem, 5vw, 5.375rem);
     color: var(--webkit-color-black);
     font-weight: 700;
-    height: 0em;
 }
 h2 {
     // font-size: 2.5rem;
@@ -22,10 +22,14 @@ h2 {
     font-weight: 400;
 }
 h3 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 700;
+    // font-size: 2rem;
     color: var(--webkit-color-white);
 }
 p {
+    font-size: clamp(1rem, 5vw, 1.25rem);
+
     font-size: 1.25rem;
     color: var(--webkit-color-white);
 }
@@ -39,16 +43,34 @@ button {
     font-size: 1.125rem;
     border: 1px var(--webkit-color-green) solid;
     cursor: pointer;
+    @media (max-width: 320px) {  
+        width: 232px;
+    }
 }
 .container {
     display: flex;
     flex-direction: column;
     gap: 64px;
+    padding: 32px;
+    @media (max-width: 768px) {
+
+        padding: 0 32px;
+    }
+    @media (max-width: 480px) {
+
+        padding: 0 16px;
+    }
+    @media (max-width: 320px) {
+
+        padding: 0;
+    }
     .section-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 104px;
+    gap: 32px;
     .title {
         display: flex;
         flex-direction: column;
@@ -57,6 +79,8 @@ button {
     }
     }
     .section-promo {
+        max-width: 1068px;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         img {
@@ -66,7 +90,8 @@ button {
     }
     .section-description {
         margin: 0 auto;
-        max-width: 1168px;
+        max-width: 1068px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -74,8 +99,8 @@ button {
         padding: 80px 100px;
         background-color: var(--webkit-color-dark);
         border-radius: 32px;
-        @media (max-width: 768px) {
-            max-width: 704px;
+        @media (max-width: 1068px) {
+            max-width: 1068px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -86,10 +111,21 @@ button {
             flex-direction: column;
             gap: 32px;
             max-width: 509px;
+            div {
+                h3 {
+                    color: var(--webkit-color-white);
+                    white-space: nowrap;
+                }
+                p {
 
+                }
+            }
         }
         .section-description__right-content {
             width: 368px;
+            @media (max-width: 320px) {
+                max-width: 296px;
+            }
             .section-description__right-content_card {
                 padding: 40px 32px;
                 display: flex;
@@ -133,13 +169,133 @@ button {
     }
     .section-card {
         margin: 0 auto;
-        max-width: 1168px;
+        max-width: 1068px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         gap: 32px;
+        @media (max-width: 480px) {
+            max-width: 448px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+        }
+
         .section-card__left, .section-card__right {
+            .section-card__right_text, .section-card__left_text {
+                h3 {
+                    color: #000000;
+                }
+                p {
+                    font-size: clamp(1rem, 20vw, 1.125rem);
+                    color: var(--webkit-color-grey);
+                }
+            }
+            // position: relative;
             flex: 1;
-            background-color: #666666;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #F2F2F2;
+            border-radius: 32px;
+            padding: 64px 0px 0px 64px;
+            min-height: 300px;  
+            width: 100%;
+            @media(max-width: 468px) {
+                padding: 32px 0px 0px 32px;
+            }   
+            @media(max-width: 4320px) {
+                padding: 24px 0px 0px 24px;
+            }     
+  
+            img {
+                width: 340px;
+                align-self: flex-end;
+                @media(max-width: 480px) {
+                    width: 220px;
+                    align-self: flex-end;
+
+                }
+                @media(max-width: 320px) {
+                    width: 120px;
+                    align-self: flex-end;
+
+                }
+            }
+         }
+    }
+    .footer {
+        width: 100%;
+        background-color: var(--webkit-color-black);
+        
+        .footer-content {
+            padding: 64px 0px;
+            max-width: 1068px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            .footer-content__title {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            .footer-content__title, .footer-content__description {
+                max-width: 368px;
+                p {
+                    color: #C6C7C8;
+                    font-size: 0.875rem;
+                    font-weight: 200;
+                }
+            }
         }
     }
+
 }
+        @media (max-width: 768px) {
+            h1 {
+                font-weight: 700;
+                font-size: clamp(2rem, 5vw, 3rem);
+            }
+            h2 {    font-weight: 400;
+                font-size: clamp(1.5rem, 5vw, 1.5rem);
+            }
+            h3 {
+                font-size: clamp(1rem, 5vw, 2rem);
+            }
+            p {
+                font-size: clamp(1rem, 5vw, 1.25rem);
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-weight: 700;
+                font-size: clamp(1.25rem, 5vw, 2rem);
+            }
+            h2 {    font-weight: 400;
+                font-size: clamp(1rem, 5vw, 1.5rem);
+            }
+            h3 {
+                font-size: clamp(1rem, 5vw, 2rem);
+            }
+            p {
+                font-size: clamp(1rem, 5vw, 1.25rem);
+            }
+        }
+        @media (max-width: 320px) {
+            h1 {
+                font-weight: 700;
+                font-size: 1.25rem;
+                   }
+            h2 {    font-weight: 400;
+                font-size: 1rem;
+                  }
+            h3 {
+                font-size: 1rem;
+                }
+            p {
+                font-size: 1rem;
+                   }
+        }
