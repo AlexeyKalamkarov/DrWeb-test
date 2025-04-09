@@ -232,6 +232,22 @@ button {
 .footer {
   width: 100%;
   background-color: var(--webkit-color-black);
+  margin-top: 166px;
+}
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 480px) {
+  .footer {
+    margin-top: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 64px;
+  }
 }
 .footer .footer-content {
   padding: 64px 0px;

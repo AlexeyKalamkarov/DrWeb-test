@@ -230,6 +230,16 @@ button {
 .footer {
     width: 100%;
     background-color: var(--webkit-color-black);
+    margin-top: 166px;
+    @media(max-width: 768px) {
+        margin-top: 64px;
+    }
+    @media(max-width: 480px) {
+        margin-top: 48px;
+    }
+    @media(max-width: 768px) {
+        margin-top: 48px;
+    }
     
     .footer-content {
         padding: 64px 0px;
